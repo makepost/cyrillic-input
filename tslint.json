@@ -1,0 +1,12 @@
+{
+  "extends": [
+    "tslint:latest",
+    "tslint-config-prettier",
+    "tslint-plugin-prettier"
+  ],
+  "jsRules": {
+    "object-literal-sort-keys": false,
+    "ordered-imports": true,
+    "prettier": true
+  }
+}

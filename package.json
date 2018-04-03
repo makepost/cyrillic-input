@@ -1,6 +1,6 @@
 {
   "name": "cyrillic-input",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Regular expressions for autocomplete, to match user input against",
   "main": "CyrillicInput",
   "types": "CyrillicInput",

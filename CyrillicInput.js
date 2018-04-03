@@ -78,7 +78,17 @@
       э: "(?:э|'|є|ye|e)",
       " ": "(?:-| |ь|ъ)?",
       "-": "(?:-| )?",
-      "\\": "(?:\\\\)?"
+      "\\": "(?:\\\\)?",
+      0: "0",
+      1: "1",
+      2: "2",
+      3: "3",
+      4: "4",
+      5: "5",
+      6: "6",
+      7: "7",
+      8: "8",
+      9: "9"
     };
   }
 
@@ -94,10 +104,12 @@
     if (input in this.cache) {
       matcher = this.cache[input];
     } else {
+      var translit = this.translit;
+
       var re = input
         .split("")
-        .map((/** @type {string} */ x) => {
-          return this.translit[x] || "";
+        .map(function(/** @type {string} */ x) {
+          return translit[x] || "";
         })
         .join("");
 

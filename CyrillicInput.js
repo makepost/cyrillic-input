@@ -2,6 +2,7 @@
   "use strict";
 
   function CyrillicInput() {
+    // @ts-ignore Duplicate identifier in TS 2.9?
     this.regexify = this.regexify.bind(this);
 
     this.cache = {};
@@ -93,10 +94,8 @@
     };
   }
 
-  /**
-   * @param {string} input
-   */
-  CyrillicInput.prototype.regexify = function(input) {
+  // @ts-ignore Duplicate identifier in TS 2.9?
+  CyrillicInput.prototype.regexify = function(/** @type {string} */ input) {
     input = input.toLowerCase();
 
     /** @type {RegExp} */
